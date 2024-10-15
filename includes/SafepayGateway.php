@@ -38,8 +38,8 @@ class SafepayGateway extends WC_Payment_Gateway
         $this->has_fields = false;
         $this->supports = ['products'];
 
-        $this->method_title = _x('Safepay', 'Safepay Gateway', 'woocommerce-safepay-gateway');
-        $this->method_description = __('Pay via Credit / Debit Cards, Bank Accounts / Wallets', 'woocommerce-safepay-gateway');
+        $this->method_title = _x('Safepay', 'Safepay Checkout', 'woocommerce-safepay-gateway');
+        $this->method_description = __('Pay with your credit & debit cards', 'woocommerce-safepay-gateway');
     }
 
     /**
@@ -342,8 +342,8 @@ class SafepayGateway extends WC_Payment_Gateway
             'enabled' => array(
                 'title' => __('Enable/Disable', 'woocommerce-safepay-gateway'),
                 'type' => 'checkbox',
-                'label' => __('Enable Safepay Payment Gateway', 'woocommerce-safepay-gateway'),
-                'description' => __('Enable or disable the gateway.', 'woocommerce-safepay-gateway'),
+                'label' => __('Enable Safepay Checkout', 'woocommerce-safepay-gateway'),
+                'description' => __('Enable or disable Safepay Checkout.', 'woocommerce-safepay-gateway'),
                 'desc_tip' => false,
                 'default' => 'yes'
             ),
@@ -366,7 +366,7 @@ class SafepayGateway extends WC_Payment_Gateway
                 'label' => __('Title at checkout', 'woocommerce-safepay-gateway'),
                 'description' => __('Title at checkout', 'woocommerce-safepay-gateway'),
                 'desc_tip' => true,
-                'default' => 'Safepay checkout'
+                'default' => 'Safepay Checkout'
             ),
             'description' => array(
                 'title' => __('Description', 'woocommerce-safepay-gateway'),
@@ -377,22 +377,22 @@ class SafepayGateway extends WC_Payment_Gateway
                 'default' => 'Pay using your credit or debit card. Safepay supports all Visa and MasterCard credit and debit cards'
             ),
             'merchant_api_key' => array(
-                'title' => __('Merchant API Key', 'woocommerce-safepay-gateway'),
+                'title' => __('Merchant API key', 'woocommerce-safepay-gateway'),
                 'type' => 'text',
-                'label' => __('Registered Merchant API Key at Safepay', 'woocommerce-safepay-gateway'),
+                'label' => __('Registered Merchant API key', 'woocommerce-safepay-gateway'),
                 'description' => __('Registered Merchant API Key at Safepay.', 'woocommerce-safepay-gateway'),
                 'desc_tip' => true,
                 'default' => ''
             ),
             'merchant_secret_key' => array(
-                'title' => __('Merchant Secured Key', 'woocommerce-safepay-gateway'),
+                'title' => __('Merchant secret key', 'woocommerce-safepay-gateway'),
                 'type' => 'text',
-                'description' => __('Merchant\'s security key.', 'woocommerce-safepay-gateway'),
+                'description' => __('Merchant\'s secret key.', 'woocommerce-safepay-gateway'),
                 'desc_tip' => true,
                 'default' => ''
             ),
             "merchant_webhook_secret" => [
-                "title" => __("Merchant Webhook Secret Key", "woocommerce-safepay-gateway"),
+                "title" => __("Merchant webhook secret key", "woocommerce-safepay-gateway"),
                 "type" => "text",
                 "description" =>
                 // translators: Instructions for setting up 'webhook shared secrets' on settings page.
